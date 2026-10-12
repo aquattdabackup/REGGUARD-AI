@@ -1,0 +1,93 @@
+{
+  "code": "RG-DAR-001",
+  "version": "1.0",
+  "title": "Digital Asset Issuer Readiness",
+  "jurisdiction": "Internal demo policy; no statutory certification",
+  "effective_at": "2026-10-01T00:00:00Z",
+  "description": "Evidence-based onboarding readiness. PASS applies only to a named rule at its evaluation time.",
+  "rules": [
+    {
+      "code": "R01",
+      "title": "LEI reference record",
+      "severity": "HIGH",
+      "operator": "equals",
+      "expected": {
+        "value": true
+      }
+    },
+    {
+      "code": "R02",
+      "title": "Entity and registration status",
+      "severity": "HIGH",
+      "operator": "in",
+      "expected": {
+        "registration_status": [
+          "ISSUED"
+        ],
+        "entity_status": [
+          "ACTIVE"
+        ]
+      }
+    },
+    {
+      "code": "R03",
+      "title": "Legal entity name alignment",
+      "severity": "HIGH",
+      "operator": "equals",
+      "expected": {
+        "reference": "GLEIF legal name; normalized exact match"
+      }
+    },
+    {
+      "code": "R04",
+      "title": "Deployed contract presence",
+      "severity": "MEDIUM",
+      "operator": "equals",
+      "expected": {
+        "value": true
+      }
+    },
+    {
+      "code": "R05",
+      "title": "Wallet possession proof",
+      "severity": "MEDIUM",
+      "operator": "equals",
+      "expected": {
+        "required": false
+      }
+    },
+    {
+      "code": "R06",
+      "title": "Required supporting evidence",
+      "severity": "HIGH",
+      "operator": "in",
+      "expected": {
+        "types": [
+          "certificate",
+          "issuer_declaration"
+        ]
+      }
+    },
+    {
+      "code": "R07",
+      "title": "Cross-document consistency",
+      "severity": "HIGH",
+      "operator": "equals",
+      "expected": {
+        "identifiers": [
+          "legal_entity_name",
+          "lei"
+        ]
+      }
+    },
+    {
+      "code": "R08",
+      "title": "External source freshness",
+      "severity": "MEDIUM",
+      "operator": "numeric_range",
+      "expected": {
+        "max_age_hours": 72
+      }
+    }
+  ]
+}

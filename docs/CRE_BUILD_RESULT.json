@@ -1,0 +1,8 @@
+{
+  "status": "COMPILED_NOT_SIMULATED",
+  "sdk": "1.23.0",
+  "cli": "1.38.0",
+  "wasm_bytes": 3023905,
+  "wasm_sha256": "021a30aea613f7923294ff22c04d0f44c3f8c8345c595bd14f688d4fc79ac9e2",
+  "simulation": "BLOCKED: authentication required; no account session or CRE_API_KEY"
+}

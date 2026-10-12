@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-12",
+  "frontend_url": "https://regguard-ai.vercel.app",
+  "verifier_url": "https://regguard-ai.vercel.app/verify",
+  "project_dashboard": "https://vercel.com/luong10/regguard-ai",
+  "deployment_id": "dpl_HFTqffstsrgKHv2VCjEbz3K7wmY5",
+  "state": "READY",
+  "upload_scope": "52 frontend and build files; no backend, policies, documentation, fixtures or secrets",
+  "http_checks": {
+    "/": 200,
+    "/login": 200,
+    "/verify": 200
+  },
+  "backend_connected": false,
+  "git_auto_deployment_connected": false
+}

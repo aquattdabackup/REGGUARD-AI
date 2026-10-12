@@ -1,0 +1,25 @@
+{
+  "name": "regguard-ai",
+  "private": true,
+  "packageManager": "pnpm@12.11.2",
+  "scripts": {
+    "dev": "pnpm --filter @regguard/web dev",
+    "build": "pnpm --filter @regguard/web build",
+    "lint": "pnpm --filter @regguard/web lint",
+    "typecheck": "pnpm -r typecheck",
+    "test:e2e": "pnpm --filter @regguard/web test:e2e",
+    "verify": "node scripts/verify-report.mjs",
+    "postinstall": "node scripts/copy-pdf-worker.mjs",
+    "test:integrity": "node --test scripts/integrity.test.mjs"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.8",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "canonicalize": "^2.1.0",
+    "viem": "^2.38.0"
+  }
+}

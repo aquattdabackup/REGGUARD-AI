@@ -1,0 +1,9 @@
+{
+  "schedule": "0 */10 * * * *",
+  "lei": "5493001KJTIIGC8Y1R12",
+  "registryAddress": "REPLACE_WITH_DEPLOYED_AUDIT_REGISTRY",
+  "tokenAddress": "REPLACE_WITH_SEPOLIA_TOKEN_ADDRESS",
+  "recordSeed": "REPLACE_WITH_RANDOM_32_BYTE_HEX",
+  "writeEnabled": false,
+  "receiverAddress": ""
+}

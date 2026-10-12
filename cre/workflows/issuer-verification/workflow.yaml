@@ -1,0 +1,7 @@
+staging-settings:
+  user-workflow:
+    workflow-name: regguard-issuer-verification
+  workflow-artifacts:
+    workflow-path: .
+    config-path: ./config.local.json
+    secrets-path: ""

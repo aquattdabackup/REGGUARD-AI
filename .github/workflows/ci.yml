@@ -1,0 +1,67 @@
+name: checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  application:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      APP_ENV: development
+      DEMO_MODE: "true"
+      DATABASE_URL: sqlite:///./.data/regguard.db
+      APP_ORIGIN: http://localhost:3000
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12.11.2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pnpm install --frozen-lockfile
+      - run: pip install -c services/api/requirements.lock -e 'services/api[dev]'
+      - run: ruff check services/api scripts/local_setup.py scripts/tests && ruff format --check services/api scripts/local_setup.py scripts/tests
+      - run: python -m pytest services/api/tests scripts/tests -q
+      - run: node --test scripts/integrity.test.mjs
+      - run: node scripts/test-database.mjs
+      - run: pnpm typecheck && pnpm lint && pnpm build
+      - run: pnpm --filter @regguard/web exec playwright install --with-deps chromium
+      - name: Start local fixture services
+        run: |
+          python -m alembic -c services/api/alembic.ini upgrade head
+          python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 > .data/api.log 2>&1 &
+          python -m app.worker > .data/worker.log 2>&1 &
+          pnpm --filter @regguard/web start --hostname 127.0.0.1 > .data/web.log 2>&1 &
+          curl --retry 15 --retry-delay 2 --retry-connrefused --fail http://localhost:8000/ready
+          curl --retry 15 --retry-delay 2 --retry-connrefused --fail http://localhost:3000/login > /dev/null
+      - run: pnpm test:e2e
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-test-results
+          path: |
+            apps/web/playwright-report
+            apps/web/test-results
+  contracts-and-cre:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12.11.2
+      - uses: oven-sh/setup-bun@v2
+      - uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: v1.7.1
+      - run: pnpm install --frozen-lockfile
+      - run: forge test --root contracts -vv
+      - run: bun x --no-install cre-compile main.ts dist/workflow.wasm
+        working-directory: cre/workflows/issuer-verification

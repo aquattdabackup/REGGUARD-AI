@@ -1,0 +1,5 @@
+# Preserve byte offsets in PDF fixtures and binary asset contents.
+*.pdf binary
+*.png binary
+*.ttf binary
+*.woff2 binary

@@ -1,0 +1,10 @@
+# Legacy API Config as Code only. New services: docs/ACCOUNT_SETUP.md.
+# Do not apply this API health check to the worker.
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "services/api/Dockerfile"
+[deploy]
+healthcheckPath = "/ready"
+healthcheckTimeout = 60
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3

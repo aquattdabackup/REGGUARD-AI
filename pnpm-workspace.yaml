@@ -1,0 +1,7 @@
+packages:
+  - apps/*
+  - packages/*
+  - cre/workflows/*
+allowBuilds:
+  sharp: true
+  unrs-resolver: true

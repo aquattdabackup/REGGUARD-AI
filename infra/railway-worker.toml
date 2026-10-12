@@ -1,0 +1,9 @@
+# Legacy Config as Code only. For new services, follow docs/ACCOUNT_SETUP.md.
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "services/api/Dockerfile"
+[deploy]
+startCommand = "python -m app.worker"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3
+# No HTTP health check. Keep one replica in a single region.

@@ -1,0 +1,407 @@
+{
+  "gleif": {
+    "provider": "GLEIF",
+    "source_identifier": "https://api.gleif.org/api/v1/lei-records/5493001KJTIIGC8Y1R12",
+    "fetched_at": "2026-10-12T04:08:20.417232Z",
+    "normalized_data": {
+      "status": "ok",
+      "error": null,
+      "found": true,
+      "lei": "5493001KJTIIGC8Y1R12",
+      "legal_name": "Bloomberg Finance L.P.",
+      "entity_status": "ACTIVE",
+      "registration_status": "ISSUED",
+      "registered_address": {
+        "language": "en",
+        "addressLines": [
+          "C/O Corporation Service Company",
+          "251 Little Falls Drive"
+        ],
+        "addressNumber": null,
+        "addressNumberWithinBuilding": null,
+        "mailRouting": null,
+        "city": "Wilmington",
+        "region": "US-DE",
+        "country": "US",
+        "postalCode": "19808"
+      },
+      "last_update": "2026-01-05T14:20:40Z"
+    },
+    "raw_data": {
+      "meta": {
+        "goldenCopy": {
+          "publishDate": "2026-10-11T16:00:00Z"
+        }
+      },
+      "data": {
+        "type": "lei-records",
+        "id": "5493001KJTIIGC8Y1R12",
+        "attributes": {
+          "lei": "5493001KJTIIGC8Y1R12",
+          "entity": {
+            "legalName": {
+              "name": "Bloomberg Finance L.P.",
+              "language": "en"
+            },
+            "otherNames": [],
+            "transliteratedOtherNames": [],
+            "legalAddress": {
+              "language": "en",
+              "addressLines": [
+                "C/O Corporation Service Company",
+                "251 Little Falls Drive"
+              ],
+              "addressNumber": null,
+              "addressNumberWithinBuilding": null,
+              "mailRouting": null,
+              "city": "Wilmington",
+              "region": "US-DE",
+              "country": "US",
+              "postalCode": "19808"
+            },
+            "headquartersAddress": {
+              "language": "en",
+              "addressLines": [
+                "731 Lexington Avenue"
+              ],
+              "addressNumber": null,
+              "addressNumberWithinBuilding": null,
+              "mailRouting": null,
+              "city": "New York",
+              "region": "US-NY",
+              "country": "US",
+              "postalCode": "10022"
+            },
+            "registeredAt": {
+              "id": "RA000602",
+              "other": null
+            },
+            "registeredAs": "4348344",
+            "jurisdiction": "US-DE",
+            "category": "GENERAL",
+            "legalForm": {
+              "id": "T91T",
+              "other": null
+            },
+            "associatedEntity": {
+              "lei": null,
+              "name": null
+            },
+            "status": "ACTIVE",
+            "expiration": {
+              "date": null,
+              "reason": null
+            },
+            "successorEntity": {
+              "lei": null,
+              "name": null
+            },
+            "successorEntities": [],
+            "creationDate": "2007-06-05T00:00:00Z",
+            "subCategory": null,
+            "otherAddresses": [],
+            "eventGroups": []
+          },
+          "registration": {
+            "initialRegistrationDate": "2012-12-06T20:55:22Z",
+            "lastUpdateDate": "2026-01-05T14:20:40Z",
+            "status": "ISSUED",
+            "nextRenewalDate": "2027-01-25T16:50:02Z",
+            "managingLou": "5493001KJTIIGC8Y1R12",
+            "corroborationLevel": "FULLY_CORROBORATED",
+            "validatedAt": {
+              "id": "RA000602",
+              "other": null
+            },
+            "validatedAs": "4348344",
+            "otherValidationAuthorities": []
+          },
+          "bic": null,
+          "mic": null,
+          "ocid": "us_de/4348344",
+          "qcc": null,
+          "gem": null,
+          "spglobal": [
+            "39460001"
+          ],
+          "conformityFlag": "CONFORMING"
+        },
+        "relationships": {
+          "managing-lou": {
+            "links": {
+              "related": "https://api.gleif.org/api/v1/lei-records/5493001KJTIIGC8Y1R12/managing-lou"
+            }
+          },
+          "lei-issuer": {
+            "links": {
+              "related": "https://api.gleif.org/api/v1/lei-records/5493001KJTIIGC8Y1R12/lei-issuer"
+            }
+          },
+          "field-modifications": {
+            "links": {
+              "related": "https://api.gleif.org/api/v1/lei-records/5493001KJTIIGC8Y1R12/field-modifications"
+            }
+          },
+          "direct-parent": {
+            "links": {
+              "relationship-record": "https://api.gleif.org/api/v1/lei-records/5493001KJTIIGC8Y1R12/direct-parent-relationship",
+              "lei-record": "https://api.gleif.org/api/v1/lei-records/5493001KJTIIGC8Y1R12/direct-parent"
+            }
+          },
+          "ultimate-parent": {
+            "links": {
+              "relationship-record": "https://api.gleif.org/api/v1/lei-records/5493001KJTIIGC8Y1R12/ultimate-parent-relationship",
+              "lei-record": "https://api.gleif.org/api/v1/lei-records/5493001KJTIIGC8Y1R12/ultimate-parent"
+            }
+          }
+        },
+        "links": {
+          "self": "https://api.gleif.org/api/v1/lei-records/5493001KJTIIGC8Y1R12"
+        }
+      }
+    },
+    "mode": "live",
+    "source_hash": "473a71316a0439a393e755d44424734f80f55f7217b36124afd6a9281c46f82d"
+  },
+  "evm": {
+    "provider": "EVM",
+    "source_identifier": "eip155:11155111:0x0000000000000000000000000000000000000000",
+    "fetched_at": "2026-10-12T04:08:23.066467Z",
+    "normalized_data": {
+      "status": "ok",
+      "error": null,
+      "chain_id": 11155111,
+      "address": "0x0000000000000000000000000000000000000000",
+      "contract_exists": false,
+      "block_number": 11896315,
+      "block_hash": "0xb157dffe52e9a9ff582c4f80d33a326ba577adad04f88be6b851071d9968c8c1"
+    },
+    "raw_data": {
+      "block": {
+        "hash": "0xb157dffe52e9a9ff582c4f80d33a326ba577adad04f88be6b851071d9968c8c1",
+        "parentHash": "0x49a0f8a7a3d813066973d6a3a9b63fd34aad9d0389b8d37b9c39ce535d16f845",
+        "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+        "miner": "0x8f614cdb61e37b6f18d9705942c93fa86b04d711",
+        "stateRoot": "0x3cdc8a38fef76d65b0ae1d812848e4ddbfeacd385686630636d50679eda5a1f6",
+        "transactionsRoot": "0xdbf5c04d17087029086bd2a512370559ff26322d8435086cdb44e10f562be00d",
+        "receiptsRoot": "0x6eb7a37a49461179b173d65f35df7b37b0c6c6664508689ab27c82a9ea55e5bb",
+        "logsBloom": "0x0124342010122102025a4280c639909800d501270120441600900414a0111546508818a101207003a2ae2c434b200ca822311428405640010c0802110c8c400a104c874182201288300800c9466b4921681002c8314408340024001180809844024200122a185010a20420e104100d82120c40d924ad24411eaa603008011a0880d80c812814ea612090081d8ac6258310a42f89a005412901840a6e5000342020c0801890201240235000001001009a00c21401204d020c804442820b690c13482994a24440601480394400d20a20a35e5f42080488103601114927412063512000850c00902c48ca0502032222cc7048a0360808801a41c0e50800022d2a20",
+        "difficulty": "0x0",
+        "number": "0xb585fb",
+        "gasLimit": "0xbe5c9e6",
+        "gasUsed": "0x369f62d",
+        "timestamp": "0x6acc5954",
+        "extraData": "0x455046206275696c646572206279204b7269732026204d61726b6f",
+        "mixHash": "0x87f6fa9e6664f76f3e26aeed8745a68c1705154c51b45f0ffe349d20db6e96e0",
+        "nonce": "0x0000000000000000",
+        "baseFeePerGas": "0xe",
+        "withdrawalsRoot": "0x85fc2a5a617f28dcfe0a05108067f8fe883ac6f89046859b1c61ddf835842045",
+        "blobGasUsed": "0x180000",
+        "excessBlobGas": "0x0",
+        "parentBeaconBlockRoot": "0xbf3d239bb63c5c5929af41f6ada32db12af7b34c9b8e975aafadd832935c0628",
+        "requestsHash": "0xe3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "blockAccessListHash": "0xa98a3f412a5b7cf9236b31cb2d15c28b9e4543c6fc5bd4d1ff879d3cda0feeb6",
+        "slotNumber": "0xacfcff",
+        "size": "0xc8de",
+        "uncles": [],
+        "transactions": [
+          "0xb13168bb6d247ea38e66c1e8ab2cff947a38b923f80c898bd42a78d57c812d33",
+          "0xda6e96e8577b6d17c466d8ec5c61d987003988e2b92bec38d6b339c36f2e8670",
+          "0x8da80ef51c9bc96f4ea681028de52814c5d023fe29e9069126500f9022b400b0",
+          "0x543d2f74cd64e12373a20640409ecfce58887022749e1e458d18088b45666ef0",
+          "0xee666564962daf461c2f555358b91b26309a5202fe559c46df7bf535b7e7d0f2",
+          "0xe771c52d54688b81607914dcf01e9be1f54d0662fc0a14745fa17e89cac3e5d4",
+          "0x766a99fb3f7af6abf2ced3f44e6841cbeae787523b554590a744ed61f5bb2fd8",
+          "0x521970fca79ab501d02347c3d39f22a5dc6712ec38f6cac2705540b1579d62fc",
+          "0xc2e408e87eea1709765e6f903c35fa0f8d53afc491058f351acf661ef84ab365",
+          "0xdae8cfccbc32a083e4cc9f6fd298fa79671b9e3edc0bb7f89112d4e6697091ae",
+          "0xc8c09385c21d624e39c016b1e9640e48cda6990043020380db0c13b70ff4086c",
+          "0x28a7d03b71d4b9c097104f43e88b7dedff70d122aba901f8e4b0a154bf1580f0",
+          "0x3189781f057a2fe02f4cc71dd32fb0965fd580a850391435bdf9518951838c53",
+          "0x2b6ceda048594b21ddefec4e78caf45fe99700bf852d651eef16eb768936ba8e",
+          "0xfe275cad350108b7028b0f700a85acee1cb0e5c2af00d23bc00cd6f19901206d",
+          "0x6512736723ea7243b598c10371516f943d51f1abe7711e46919e7bb58dd42275",
+          "0x9fa3fb44f61d44acf58e8d521c4e02b57c6ebbe864cdf5e667e119dd11c8170e",
+          "0x8095d1dd877c3f07faaa69f9a7d0f2b70c064b0a5d2780aca0db2578ee64718f",
+          "0xdc817c12f3b8e4e2796057d9d9e566b56cf4497f1c9d07551ad31fa2dd5cf61b",
+          "0x9d8f7a6f72b0a89b5dc8b14317a7a213ca938a893a37d18d1130824663f5ff4e",
+          "0x9d8b25d6bf99eea9fb9a6e5b1806b030a68a7b624b0312a2861dcd898e890e15",
+          "0x923cfb2666016c7b3e12307565b0d9332a8fd73584e30dee52f7188a456d5ab7",
+          "0xd465c9d7f66fa63b2538cb0ecb53e62b016ab12b0ee82d72bbb33979b80a0357",
+          "0x8f13927d1a77fa42bb9f8ce06cc9053e6cafe2519fab0217c9a3d9ca2c984ff3",
+          "0xafdf79d8cb8212c3d1ec27652ba1be6ef13394e3fcb29acadbdd09a0ec86bc7f",
+          "0xcec6b7e3e06b4edd62e91c59a2f8a5dd40f128de4f8cb4c4142d1795b8f076d2",
+          "0xf218d894f944a4c69a66b4fc5dcc965e9685e80161ab67adab53358a9a21fb2c",
+          "0x42a1e73db76ccfeb343c6c114077d830ab37bffad606624f8546584e887df310",
+          "0xffaf935196286b9519d2c5f321bedee4ee2828f4ee54ced37f8768ec4300a442",
+          "0x4d72c61f7b6e01cb26d5959fe62f2b3d72eb5b66e1ad9f7122efbb8be49c96de",
+          "0xfbfb628b10663641ca255d75fd56e9cdaae99e3a34f92f520f8e1aa676958e3f",
+          "0x3d36d071f5742340a167654874a474edc8dddd230656e80df23394621f1b752f",
+          "0x9b4b9200cca7fa5a7bd5f296d1d9d940e2589dd565a9322834c12a89daf2bdd5",
+          "0x97caaaba014cc56d9879c533ab54db51541d70001c77df017be90f17328d3ed7",
+          "0x03652d819c5ae6f53eb0f137c8d4e55082bb5328240bbff8cbeff854d3a381be",
+          "0xd69b643f7275d46a5a7375c2978c4d1f8f26a73f2b3fbd3ee8eed9f658ca14d0",
+          "0x016a707152d7ea04735a0dc9bb33b9c022831c480fefdc625af63974d1af3558",
+          "0xc4b6847322bb2ac19905cb5cea7c8d274092bacabae57ba267b757d22fd13342",
+          "0x0c4fdeadbe64d18da7bd5977927c61670ee6bfb44262756b9584e506f64c9e08",
+          "0x9e92e8b17076d35b2addbb4be637b4e2fb467048418c7992529de53685f977f4",
+          "0x16fc4f4ff2df4d26995123157686829fb78302a472ca8fd6e8433c14abb7ba96",
+          "0x5bdd858e8779c032777ea6c86d98c8662dce2b3032f4cf6632c95d6ded7a5b5f",
+          "0xb2f5f6b849ece8ec2bb978345df31c475d12fcc7386511735aa3bb60677b215a",
+          "0x6a56f21c66e494309afbcbee862f70f4bd3c6d0a516e7322b916de10bbdd0220",
+          "0x2c540a38bb61bf324def49eb023f8ecdc232217864c3572f556728f3ebdf820f",
+          "0x7f64db039a675f81a90f81900dadcc2ef9f7d81eed25182ecc8f29cb1c468a5b",
+          "0x00580229177ef784947bdea217d600207abe0a86d03a764b09e73d6878bb7d70",
+          "0x4eca83f59d28248328497f4365e3ad4ee832ed7e7231ba33e713f874a68dc9c3",
+          "0x248a99db7878b73ae8f931e74e7409493e1cbf89bcd2f6b8aed0eb2d2ca4efe7",
+          "0xbc7753667fc8c2911a8c07446397465ef3cf1e9ff4c6541be956d58c9cc64415",
+          "0xe4766f848faec9970a0ca400894f75bf3a3da7052a9d96e00ee4e2acdae1b3aa",
+          "0x7ae2d95e34e5e300d8118d8134c18fde8202d1b53ead503bb7642482fe81f05e",
+          "0x5baf213d435fc076b7f7bf8290bde2736e9b15814fcda11f4d1717b55624617c",
+          "0x8b43693b3c1a555885593ccae0fce0d100f6b59a8e21dd588c313fb4dd27ce75",
+          "0x9f07d7da8a24775ed7e61046aff4c5a8e1010280524f88dbcdc6df1a75abd6b1",
+          "0x3d943232ffc67d54269f16f27d13331ada196fd92ddfedcd024b2f77a2546bc6",
+          "0xd46b51389227b7c114fe912abe85de4066efdf9325a2af87519b9531c20d4a2c",
+          "0x3de0207e0f0fca6e13d174ba9fb1bd353c2c7a1b7cec2a52b94072fea324b80f",
+          "0x5a172fb88ba2f0279f9a07b3a94f3407a3a67f846234c1eceb13163e7a054eeb",
+          "0x44278cabfa945ec42f990178b017c64eff207fc12b8fef1d5d93a0170302fea2",
+          "0x5ae97c3524b7c70644ff5fbb2f51c079a96247a839831f367731dab5dfe4d789",
+          "0x3e50d241b8f0a1c43fa95955db22c8d2d5430780b46b0a01dafffd466d2ce284",
+          "0x009dfd94044c39662c80691ffad6e615c74949f91a3ed4c50cd63ef52340b851",
+          "0xc0a1407c4c04a87c72bccaac70a532e5b2bc19bc5961567d4ee8a601c59df855",
+          "0x9f49f1c41619e997cd3899fac8577896556b75db97ca1cbbf7ede5b39f332f11",
+          "0xfa685f5bb01d9c39ceaeecf7103531e07926633b91d5dce9d8fca803cec0d1e4",
+          "0x86a164e061dfcd67fc0720d6f868c69802038e7b10f2fcf4de10459ade1c51e3",
+          "0xf031693ae54cf9c963fd71bea072bbfff0cc1ee6cda962c2a0cd9bc4292149bd",
+          "0xd10b983b3e569e782994fcf26adf38b6a3a999f1fdee708ef8150d70ae0a16a5",
+          "0xf4c043511428ab4408da8336403e4a70bb2dae2658d44dc83b8d8e9d3c569a20",
+          "0x1f695c2e7c90f95728eeea464e97c20fdce7d4fe3de3aa4e69a9245332f1e10c",
+          "0xccf559d2840d46292458229dab55a669ffa39c161d6661e1814d8ce8e730e80a",
+          "0x40d8e60aac434da14b7cb7a1d2e8ed13de09839d38e68bea74470cb4a4a60310",
+          "0x6db01c8038711c7ed6b060ed17e2cc443046f5bc23fe4d32350987732220a7d5",
+          "0xabdcf0c92404f5541959fe009aad66b117e7c7394429372539f1796f6319bd2b",
+          "0x1e4a4fff37ebc2ea9bae87cb8fb9d244c58592d12548420e9e468e7b701206f2",
+          "0x7dcc0fc5cda47922a24e896549938020c72ef774037aee061e7a6a27a3e112af",
+          "0x8d4ea5847083eb8f3bc92d82f4752855de2764ce821e487faf681bd0726c56be",
+          "0x230c913e5172eebb24456ecd51b9c5dae4a0241dcfe30c9b12877f67d435b3c3",
+          "0x275895eea6e9d67a39c8bb5e53633a78f6437a12ae87748648c6e6606ce962e6",
+          "0x45e212aad86ec52c601214b687d240c5e88159eddd95e9ee19421d5dc6e67c99",
+          "0x2872cf6e2df83471a5ae598bbf0000059a749fac750b9b65fca17afea73ebb10",
+          "0xf1e28c3db7708165c339d1f2a988a06b3fd7b753c6d5b905090dddc2b3e9bb32",
+          "0xcf765546b349da634a4293c690654d9c948a9c149a204fcfa1d31851a068d0e5",
+          "0xc37d1c49b3e7eee7c9ef965430ec30dbf3db8bb61236cedcefc24bb85e101d92",
+          "0x99d5a0e9607c40e3a24041d3d0582b3949320abbb28659fd8a976a520feaa6c0",
+          "0xce3591c3d2d03195f86647e274442fd3dbdbf2307c51ccbcbd547e968288d387",
+          "0x7a234956a96f054430e15e1361331ffb352cbf4acf00cd3e5f183a604c67c25d",
+          "0x12fdec4c3332f76efde37410b462946781839a44632340e79fb5b121303e603a",
+          "0x6e86e991183dc558a09a7664d104bbb4f436b7e0a98666146499e38b6f5e3909",
+          "0x3fcbda6649c2d6269646794dce9be1b92dfe4d3995711cc3007109df4cd7da74",
+          "0xefde46ab00d348184b833e9929628fb83e4bdf6f8c02efbd1daae9581b1c7990",
+          "0xa02d1a9aab7ef9f5260ec7356030242c39f95a8ac870d1f407293656b43a855c",
+          "0x77657a2f45116ff8696a0725ee2d898e6314f8c349929c31cda84286999fe272"
+        ],
+        "withdrawals": [
+          {
+            "index": "0x87ddf49",
+            "validatorIndex": "0x1f0",
+            "address": "0x25c4a76e7d118705e7ea2e9b7d8c59930d8acd3b",
+            "amount": "0x1289"
+          },
+          {
+            "index": "0x87ddf4a",
+            "validatorIndex": "0x384",
+            "address": "0xe276bc378a527a8792b353cdca5b5e53263dfb9e",
+            "amount": "0x1289"
+          },
+          {
+            "index": "0x87ddf4b",
+            "validatorIndex": "0x386",
+            "address": "0xe276bc378a527a8792b353cdca5b5e53263dfb9e",
+            "amount": "0x1289"
+          },
+          {
+            "index": "0x87ddf4c",
+            "validatorIndex": "0x38c",
+            "address": "0xe276bc378a527a8792b353cdca5b5e53263dfb9e",
+            "amount": "0x1289"
+          },
+          {
+            "index": "0x87ddf4d",
+            "validatorIndex": "0x398",
+            "address": "0xe276bc378a527a8792b353cdca5b5e53263dfb9e",
+            "amount": "0x1289"
+          },
+          {
+            "index": "0x87ddf4e",
+            "validatorIndex": "0x39a",
+            "address": "0xe276bc378a527a8792b353cdca5b5e53263dfb9e",
+            "amount": "0x1289"
+          },
+          {
+            "index": "0x87ddf4f",
+            "validatorIndex": "0x39f",
+            "address": "0xe276bc378a527a8792b353cdca5b5e53263dfb9e",
+            "amount": "0x1289"
+          },
+          {
+            "index": "0x87ddf50",
+            "validatorIndex": "0x3a4",
+            "address": "0xe276bc378a527a8792b353cdca5b5e53263dfb9e",
+            "amount": "0x1289"
+          },
+          {
+            "index": "0x87ddf51",
+            "validatorIndex": "0x3a8",
+            "address": "0xe276bc378a527a8792b353cdca5b5e53263dfb9e",
+            "amount": "0x1289"
+          },
+          {
+            "index": "0x87ddf52",
+            "validatorIndex": "0x3ad",
+            "address": "0xe276bc378a527a8792b353cdca5b5e53263dfb9e",
+            "amount": "0x1289"
+          },
+          {
+            "index": "0x87ddf53",
+            "validatorIndex": "0x3af",
+            "address": "0xe276bc378a527a8792b353cdca5b5e53263dfb9e",
+            "amount": "0x1289"
+          },
+          {
+            "index": "0x87ddf54",
+            "validatorIndex": "0x3b1",
+            "address": "0xe276bc378a527a8792b353cdca5b5e53263dfb9e",
+            "amount": "0x1da8"
+          },
+          {
+            "index": "0x87ddf55",
+            "validatorIndex": "0x3b2",
+            "address": "0xe276bc378a527a8792b353cdca5b5e53263dfb9e",
+            "amount": "0xed4"
+          },
+          {
+            "index": "0x87ddf56",
+            "validatorIndex": "0x3bc",
+            "address": "0xe276bc378a527a8792b353cdca5b5e53263dfb9e",
+            "amount": "0x2c7c"
+          },
+          {
+            "index": "0x87ddf57",
+            "validatorIndex": "0x3bd",
+            "address": "0xe276bc378a527a8792b353cdca5b5e53263dfb9e",
+            "amount": "0xed4"
+          },
+          {
+            "index": "0x87ddf58",
+            "validatorIndex": "0x3c1",
+            "address": "0xe276bc378a527a8792b353cdca5b5e53263dfb9e",
+            "amount": "0xed4"
+          }
+        ]
+      },
+      "code": "0x"
+    },
+    "mode": "live",
+    "source_hash": "db563dd8c7fce6bafa1e64cce7abdd5bbec04e21363db9a83e4e33cbb02c413f"
+  }
+}

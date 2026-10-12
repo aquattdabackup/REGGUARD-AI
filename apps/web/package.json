@@ -1,0 +1,49 @@
+{
+  "name": "@regguard/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@fontsource/inter": "5.3.0",
+    "@hookform/resolvers": "^5.2.2",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@regguard/integrity": "workspace:*",
+    "@supabase/supabase-js": "^2.57.0",
+    "@tanstack/react-query": "^5.90.0",
+    "@tanstack/react-table": "^8.21.3",
+    "canonicalize": "^2.1.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.544.0",
+    "motion": "^12.23.0",
+    "next": "16.4.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-hook-form": "^7.63.0",
+    "react-pdf": "^10.2.0",
+    "recharts": "^3.2.0",
+    "tailwind-merge": "^3.3.1",
+    "viem": "^2.38.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^24.5.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "axe-core": "4.14.0",
+    "eslint": "^9.36.0",
+    "eslint-config-next": "16.4.0",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.9.3"
+  }
+}

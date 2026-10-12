@@ -1,0 +1,6 @@
+{
+  "name": "@regguard/cre", "private": true, "type": "module",
+  "scripts": { "typecheck": "tsc --noEmit" },
+  "dependencies": { "@chainlink/cre-sdk": "1.23.0", "viem": "^2.38.0", "zod": "^4.1.0" },
+  "devDependencies": { "typescript": "^5.9.3", "@types/node": "^24.5.0" }
+}

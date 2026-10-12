@@ -1,0 +1,16 @@
+{
+  "name": "@regguard/integrity",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./integrity.d.ts",
+      "default": "./integrity.mjs"
+    }
+  },
+  "dependencies": {
+    "canonicalize": "^2.1.0",
+    "viem": "^2.38.0"
+  }
+}
