@@ -32,3 +32,7 @@ See [TEST_REPORT](docs/TEST_REPORT.md) for commands and scope, [FINAL_STATUS](do
 ## Account setup and Vercel release
 
 The user supplied the GitHub target, authorized Vercel hosting and completed CLI authentication. Vercel frontend deployment reached READY at https://regguard-ai.vercel.app; public HTTP and Chromium smoke checks passed. New Supabase publishable/secret key support and an explicit missing-backend state were added. The loopback OpenAI setup utility preserves existing `.env` settings and does not make external requests. ACCOUNT_SETUP documents exact Supabase, Railway, Vercel, OpenAI, Sepolia and CRE steps. Railway new-service guidance uses dashboard settings because legacy Config as Code is deprecated. Full Python and browser regression checks passed after these changes.
+
+## 13 October 2026: GitHub CI and Supabase public configuration
+
+Source is published to aquattdabackup/REGGUARD-AI. After correcting a re-encoded SQL byte-order marker, GitHub Actions run 38264164335 passed application and contract/CRE jobs on Linux. The user supplied a Supabase Project URL and publishable key. Public auth-settings and JWKS reads succeeded with ES256; the three frontend public variables were saved in Vercel. Real signup, private SQL/storage and Railway service setup still require completion.

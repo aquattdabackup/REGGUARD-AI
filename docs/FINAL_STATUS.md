@@ -1,8 +1,8 @@
 # Final implementation status
 
-12 October 2026. **Working local demonstration and hosted Vercel frontend delivered; the complete production and public-testnet objective remains incomplete.** This report distinguishes executed behavior from implemented adapters and unavailable services.
+13 October 2026. **Working local demonstration and hosted Vercel frontend delivered; the complete production and public-testnet objective remains incomplete.** This report distinguishes executed behavior from implemented adapters and unavailable services.
 
-Frontend: https://regguard-ai.vercel.app. Hosted auth awaits Supabase/Railway. Public HTTP and Chromium smoke checks passed; exact deployment metadata is in [HOSTED_DEPLOYMENT](HOSTED_DEPLOYMENT.json). Account instructions: [ACCOUNT_SETUP](ACCOUNT_SETUP.md).
+Frontend: https://regguard-ai.vercel.app. Supabase public auth configuration is present; full account flow and workspace await private Supabase setup and Railway. Public HTTP and Chromium smoke checks passed; exact deployment metadata is in [HOSTED_DEPLOYMENT](HOSTED_DEPLOYMENT.json). Account instructions: [ACCOUNT_SETUP](ACCOUNT_SETUP.md).
 
 ## Verified functionality
 
@@ -24,7 +24,7 @@ Demo login creates a real local organization/session backed by SQLite, but it is
 | Frontend builds | VERIFIED | Next production build and TypeScript pass |
 | Backend starts | VERIFIED | /ready returns ready/fixture; browser exercises API and worker |
 | Migrations work | VERIFIED LOCALLY | SQLite Alembic; PostgreSQL SQL in PGlite. Hosted Supabase still blocked |
-| Real authentication works | BLOCKED | Supabase project/test account missing. Demo and mocked verified-identity bootstrap tested |
+| Real authentication works | PARTIAL | Supabase public settings/JWKS verified and frontend configured; real signup/login/reset and private backend remain unverified |
 | Protected routes enforce permissions | VERIFIED LOCALLY | RBAC, 401/403/404 and cross-tenant API/SQL tests |
 | User creates a case | VERIFIED | Browser creation journey |
 | Supported uploads | VERIFIED LOCALLY | Real PDF worker upload; DOCX extraction/safety tests; hosted private storage unverified |
@@ -45,7 +45,7 @@ Demo login creates a real local organization/session backed by SQLite, but it is
 | Human review auditable | VERIFIED | Reviewer/rationale/timestamp retained; rule outcome unchanged |
 | Cross-tenant isolation | VERIFIED LOCALLY | API cases/docs/reports/runs; PostgreSQL table/storage-path RLS tests |
 | Responsive UI | VERIFIED | 390px viewport navigation/create; no horizontal overflow; desktop/mobile screenshots |
-| Critical automated tests | VERIFIED LOCALLY | Exact commands/counts in TEST_REPORT |
+| Critical automated tests | VERIFIED LOCALLY AND ON GITHUB | Actions run 38264164335 passed application and contracts/CRE jobs; exact scope in TEST_REPORT |
 | Reproducible setup documentation | PROVIDED / WINDOWS + VERCEL VERIFIED | README, lockfiles, scripts and account guide. Vercel Linux build passed; Docker/Railway runtime remains unverified |
 | Real and simulated modes distinct | VERIFIED | UI banners, provider metadata, API status and report mode |
 | Accurate pitch/demo material | PROVIDED | Demo script, pitch content and submission draft explicitly label unavailable services |

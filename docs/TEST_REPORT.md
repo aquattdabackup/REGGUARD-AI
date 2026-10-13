@@ -55,16 +55,24 @@ Earlier iterations exposed a PDF blob/CSP issue, a deprecated parser import poll
 
 ## Unexecuted or blocked checks
 
-- Real Supabase registration/login/email confirmation/reset, private storage and hosted migration flows: no account/project credentials.
+- Real Supabase registration/login/email confirmation/reset, private storage and hosted migration flows: public Project URL/key configured, but private backend configuration and test identities are still missing.
 - Paid OpenAI Structured Outputs/accuracy/adversarial model evaluation: no approved key/budget; fixture extraction is not an AI accuracy evaluation.
 - Public Sepolia deployment/anchor/finality, CRE simulation/DON execution: missing authorization/funding/accounts/configuration described in BLOCKERS.
 - Docker image runtime: no available daemon. Railway deployment remains unconfigured. GitHub Actions hosted result is recorded separately when observed.
 - Load/penetration/recovery testing, full manual assistive-technology review, mobile Safari/Firefox, production retention/legal-policy review: not performed.
 
-The application CI configuration is supplied in `.github/workflows/ci.yml`; this report does not claim a successful hosted CI run. Production limits and the remaining acceptance items are in [SECURITY](SECURITY.md), [FINAL_STATUS](FINAL_STATUS.md) and [BLOCKERS](../BLOCKERS.md).
+The application CI configuration is supplied in `.github/workflows/ci.yml`. The successful hosted run is recorded below. Production limits and the remaining acceptance items are in [SECURITY](SECURITY.md), [FINAL_STATUS](FINAL_STATUS.md) and [BLOCKERS](../BLOCKERS.md).
 
 ## Hosted frontend and account configuration checks
 
 Vercel deployment `dpl_HFTqffstsrgKHv2VCjEbz3K7wmY5` completed with READY status at https://regguard-ai.vercel.app. Linux installation with pinned pnpm 12.11.2, Next build and strict TypeScript passed. An explicit 52-file frontend/build bundle excluded private data, backend, policies and documentation. Public HTTP checks for `/`, `/login` and `/verify` returned 200. A Chromium smoke check confirmed the missing-backend explanation, no localhost requests and no unhandled page errors. The real hosted login screenshot is in `screenshots/hosted-login.png`. Supabase/Railway remain disconnected.
 
 Four new API tests cover new/legacy Supabase storage key headers and missing-key refusal. Two setup tests cover preserving other environment settings, rejecting malformed keys, Host/Origin/CSRF guards and never returning saved key bytes. The loopback form returned 200 at http://127.0.0.1:8765/. No real key was submitted or paid extraction called. Full Python rerun: 35 passed in 6.18s; full browser rerun: 4 passed in 41.9s.
+
+## GitHub CI verified on 13 October 2026
+
+Commit `5f6531a95dc4b3a60a68e85630c8c6a43d586375` passed [GitHub Actions run 38264164335](https://github.com/aquattdabackup/REGGUARD-AI/actions/runs/38264164335): application and contracts-and-cre both completed successfully. The application job passed Python lint/format/tests, JavaScript integrity, PGlite, TypeScript/ESLint/Next build and Playwright. The contract job passed Foundry and CRE WASM compilation. This verifies Linux CI; it does not establish paid AI, account-backed storage, public-chain transactions or authenticated CRE execution.
+
+The first hosted run exposed an incorrectly re-encoded UTF-8 byte-order marker in the initial SQL export. The export now starts with plain ASCII BEGIN; local PGlite and the full corrected hosted run passed. Supabase public auth-settings/JWKS checks returned HTTP 200 and ES256 for the user-supplied project; no test user was created and no private database or storage operation was performed.
+
+On 13 October the frontend was rebuilt with the supplied Supabase public configuration: deployment `dpl_79T7MS9V8nvqdBULXPjbAnNLiMxw` reached READY at the same production URL. Browser smoke checks again passed all three public pages, confirmed the correct Supabase URL/key in downloaded JavaScript, and found no localhost requests or unhandled errors. Backend connectivity remains unavailable pending Railway.

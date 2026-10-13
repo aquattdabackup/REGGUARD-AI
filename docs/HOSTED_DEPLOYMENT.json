@@ -1,9 +1,9 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "frontend_url": "https://regguard-ai.vercel.app",
   "verifier_url": "https://regguard-ai.vercel.app/verify",
   "project_dashboard": "https://vercel.com/luong10/regguard-ai",
-  "deployment_id": "dpl_HFTqffstsrgKHv2VCjEbz3K7wmY5",
+  "deployment_id": "dpl_79T7MS9V8nvqdBULXPjbAnNLiMxw",
   "state": "READY",
   "upload_scope": "52 frontend and build files; no backend, policies, documentation, fixtures or secrets",
   "http_checks": {
@@ -12,5 +12,24 @@
     "/verify": 200
   },
   "backend_connected": false,
-  "git_auto_deployment_connected": false
+  "git_auto_deployment_connected": false,
+  "supabase_public_configuration": {
+    "configured_in_production_bundle": true,
+    "project_ref": "nlhbzmympinzochztihf",
+    "auth_settings_http_status": 200,
+    "jwks_http_status": 200,
+    "jwt_algorithm": "ES256",
+    "real_user_flow_verified": false
+  },
+  "github_ci": {
+    "run_url": "https://github.com/aquattdabackup/REGGUARD-AI/actions/runs/38264164335",
+    "tested_commit": "5f6531a95dc4b3a60a68e85630c8c6a43d586375",
+    "application": "success",
+    "contracts_and_cre": "success"
+  },
+  "browser_smoke": {
+    "missing_backend_message": true,
+    "localhost_requests": 0,
+    "unhandled_errors": 0
+  }
 }

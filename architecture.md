@@ -28,7 +28,7 @@ Missing, failed or ungrounded evidence never silently passes. Findings retain so
 
 Node 24/Python 3.12/pnpm 12.11.2. pnpm install --frozen-lockfile runs the local PDF.js worker copy. See README for complete setup. Python: .venv/Scripts/python.exe -m pytest services/api/tests -q; .venv/Scripts/ruff.exe check services/api. Frontend: pnpm typecheck, pnpm lint, pnpm build; demo running: pnpm test:e2e. Python happy-path test creates .data/sample-report.json before node --test scripts/integrity.test.mjs. node scripts/test-database.mjs exercises real PostgreSQL semantics in PGlite. forge test --root contracts -vv. node scripts/test-local-chain.mjs requires local Anvil on 8545 and refuses non-Anvil clients. CRE build/setup in cre/README.md.
 
-Exact results and incomplete production controls are in docs/TEST_REPORT.md, docs/FINAL_STATUS.md and docs/SECURITY.md. No real account-backed Supabase flow, paid LLM call, public Sepolia write, CRE simulation/DON execution, hosted backend or hosted CI has been verified. Vercel frontend Linux build and public/browser smoke checks have passed at https://regguard-ai.vercel.app.
+Exact results and incomplete production controls are in docs/TEST_REPORT.md, docs/FINAL_STATUS.md and docs/SECURITY.md. No real account-backed Supabase flow, paid LLM call, public Sepolia write, CRE simulation/DON execution, hosted backend has been verified. GitHub Actions run 38264164335 passed both application and contracts/CRE jobs for commit 5f6531a. Vercel frontend Linux build and public/browser smoke checks have passed at https://regguard-ai.vercel.app.
 
 ## Hosted configuration and local setup
 

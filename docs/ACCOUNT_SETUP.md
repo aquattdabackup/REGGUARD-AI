@@ -1,6 +1,8 @@
-﻿# Account setup for RegGuard AI
+# Account setup for RegGuard AI
 
-Updated 12 October 2026. Complete the sections in order. Frontend: https://regguard-ai.vercel.app. Backend accounts and public contracts are not connected yet. The independent verifier is at https://regguard-ai.vercel.app/verify.
+Updated 13 October 2026. Complete the sections in order. Frontend: https://regguard-ai.vercel.app. Supabase Project URL and publishable key have been configured in Vercel; private backend services and public contracts are not connected yet. The independent verifier is at https://regguard-ai.vercel.app/verify.
+
+Supabase project: https://supabase.com/dashboard/project/nlhbzmympinzochztihf. Public auth-settings and JWKS reads succeeded (ES256). SQL installation, account signup, email and private storage still require validation.
 
 ## 1. Supabase: database, identity and private files
 
@@ -56,7 +58,7 @@ Copy the generated API URL, without a trailing slash or `/api/v1`, into Vercel `
 Project dashboard: https://vercel.com/luong10/regguard-ai
 Environment variables: https://vercel.com/luong10/regguard-ai/settings/environment-variables
 
-Add these browser-safe values for Production, then redeploy:
+App URL, Supabase URL and publishable key are already saved for Production. After Railway is available, add `NEXT_PUBLIC_API_BASE_URL` and redeploy. Complete browser-safe configuration:
 
 ```dotenv
 NEXT_PUBLIC_APP_URL=https://regguard-ai.vercel.app

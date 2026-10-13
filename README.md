@@ -6,11 +6,12 @@ RegGuard connects private evidence, cited extraction, versioned internal policie
 
 ![Evidence inspector](docs/screenshots/evidence-inspector.png)
 
-## Status - 12 October 2026
+## Status - 13 October 2026
 
 A working local vertical slice is implemented. The UI, API, durable worker, document processing, rule engine, replay, source changes, reviews, report exports, browser/CLI integrity verification and local EVM transactions have been exercised. **This is not yet a deployed production service.**
 
 - 33 backend tests and 2 local setup tests; 16 Solidity tests including 256 fuzz cases; 5 JavaScript integrity tests.
+- Linux GitHub CI: [application and contracts/CRE passed](https://github.com/aquattdabackup/REGGUARD-AI/actions/runs/38264164335).
 - 4 browser tests: workflow, mobile creation, document upload, and accessibility/keyboard regression.
 - PostgreSQL schema and RLS/immutability SQL executed with PGlite and emulated Supabase interfaces.
 - Actual read-only GLEIF and Sepolia RPC responses recorded in [LIVE_READ_RESULTS.json](docs/LIVE_READ_RESULTS.json).

@@ -1,6 +1,6 @@
 # Deployment runbook
 
-Frontend deployed and smoke-tested at https://regguard-ai.vercel.app on 12 October 2026. Account setup and exact dashboard steps are in [ACCOUNT_SETUP](ACCOUNT_SETUP.md). Supabase, Railway, paid OpenAI extraction and public contracts remain unconfigured; local tests do not establish those integrations.
+Frontend deployed and smoke-tested at https://regguard-ai.vercel.app on 13 October 2026. Supabase public URL/key are configured in the deployed bundle; private database/storage and Railway services remain pending. Account setup and exact dashboard steps are in [ACCOUNT_SETUP](ACCOUNT_SETUP.md). Private Supabase services, Railway, paid OpenAI extraction and public contracts remain unconfigured; local tests do not establish those integrations.
 
 ## Supabase and API
 
