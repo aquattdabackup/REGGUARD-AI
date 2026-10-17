@@ -49,15 +49,16 @@ def process_run(db, run, fence=lambda: True):
         ).all()
         if any(d.status not in ("READY", "FAILED") for d in documents):
             raise ValueError("DOCUMENTS_PENDING")
-        stamp = now()
-        sources = (
-            fixture_sources(case, run.snapshot.get("scenario", case.scenario), stamp)
-            if case.mode == "fixture"
-            else [
+        if case.mode == "fixture":
+            stamp = now()
+            sources = fixture_sources(case, run.snapshot.get("scenario", case.scenario), stamp)
+        else:
+            sources = [
                 GLEIFConnector().fetch(case.lei),
                 EVMConnector().fetch(case.contract_address, case.chain_id),
             ]
-        )
+            # Evaluate after collection so newly fetched sources cannot have negative ages.
+            stamp = now()
         snapshot = {
             "case": row_dict(case),
             "mode": case.mode,
